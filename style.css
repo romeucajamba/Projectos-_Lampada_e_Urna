@@ -1,26 +1,167 @@
-* {
-    
-    font-family: 'Open Sans', sans-serif;
+/*Um keyframes ou uma animação*/
+@keyframes pisca {
+    0% { opacity : 0.2; }
+    50% { opacity: 1; }
+    100% { opacity: 0.2; }
+    /*Essa animação é para os quadrados onde serãodigitado os 
+    numero, ele vai ficar piscando*/
 }
 
-head, main {
+/*Toda apresentação ou aprencia do body*/
+body {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+/*Todo estilo ou aparencia e formato da urna, tela e teclado*/
+.urna {
+    background-color: #adb5c9;
+    padding: 30px;
+    display: flex;
+}
+
+.tela {
+    width: 500px;
+    height: 320px;
+    background: linear-gradient(to right, #E8E8E8, #C1C1C1);
+    border: 2px solid #555;
     display: flex;
     flex-direction: column;
+}
+
+.teclado {
+     margin-left: 30px;
+    background-color: #403A3A;
+} 
+/*A aparencia do teclado*/
+.teclado-linha {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/*Vamos trabalhar o estilo dos nossos botões do teclado*/
+.teclado-button {
+    width: 70px;
+    height: 40px;
+    background-color: #000;
+    color: #FFF;
+    font-size: 25px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    cursor: pointer;
+    box-shadow: 3px  3px 0px #555 ;
+}
+/*Cada botão vai receber o seu estilo*/
+.botao--branco {
+    background-color: #FFF;
+    color: #000;
+    font-size: 15px;
+}
+
+.botao--corrige {
+    background-color:#F09046;
+    color: #000;
+    font-size: 15px;
+}
+
+.botao--confirma {
+    background-color: #48C079;
+    font-size: 15px;
+    width: 90px;
+    height: 50px;
+}
+
+/*Estilos e aparencia da tela, parte de dentro*/
+.d-1 {
+    flex: 1;
+    display: flex;
+}
+
+.d-1-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+
+}
+
+.d-1-right {
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end ;
+    
+}
+
+.d-2 {
+    height: 50px;
+    font-size: 14px;
+    border-top:2px solid #000;
+    padding-left: 10px;
+
+}
+/*Aqui está a formatação do d-1-1 até d-1-4*/
+.d-1-1 {
+    height: 50px;
+    display: flex;
     align-items: center;
 }
-h1 {
+
+.d-1-2 {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.d-1-3 {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.numero {
+    display: inline-block;
+    width: 30px;
+    height: 40px;
+    border: 1px solid #000;
     text-align: center;
+    line-height: 40px;
+    font-size: 25px;
 }
 
-
-
-button {
-    width:90px;
-    padding: 5px;
-    border-radius:3px ;
+.pisca {
+    animation-name: pisca;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 
-#turnOff {
-    color: #fff;
-    background-color: black;
+.d-1-4 {
+    flex: 1;
+    display: flex;
+    line-height: 30px;
 }
+/*Alterando as imagens*/
+.d-1-image {
+    border: 1px solid #000;
+    background-color: #fff;
+    text-align: center;
+    font-size: 12px;
+}
+
+.d-1-image img {
+    width: 100%;
+}
+
+.d-1-image small {
+    width: 80%;
+    font-size: 10px;
+}
+ 
